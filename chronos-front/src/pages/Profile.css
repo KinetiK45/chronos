@@ -1,0 +1,49 @@
+.avatar-container{
+    margin: auto;
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+}
+
+.profileAvatar {
+    object-fit: cover;
+    border-radius: 100%;
+    height: 100%;
+    width: 100%;
+}
+
+.profileAvatar:hover {
+    cursor: copy;
+    border: 1px solid var(--border-color);
+}
+
+.calendars {
+    width: 100%;
+}
+
+.user-calendars {
+    display: grid;
+    grid-template-columns: auto max-content;
+    grid-row-gap: 10px;
+    /*grid-gap: 10px;*/
+}
+
+.user-calendars > * {
+    background-color: var(--calendar-cells-background);
+}
+
+.main-calendar-info {
+    border-radius: 10px 0 0 10px;
+    padding: 5px;
+}
+
+.calendar-info-optional {
+    text-align: right;
+    padding: 5px;
+    border-radius: 0 10px 10px 0;
+}
+
+#create-calendar-button {
+    margin-top: 10px;
+    background-color: var(--calendar-cells-background);
+}

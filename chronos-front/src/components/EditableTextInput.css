@@ -1,0 +1,14 @@
+.editable-text-input{
+    display: flex;
+    justify-content: stretch;
+    padding: 5px 0 5px 0;
+}
+
+.editable-input-buttons {
+    width: max-content;
+    min-width: max-content;
+}
+
+.editable-input-buttons > * {
+    margin-left: 5px;
+}

@@ -1,0 +1,51 @@
+.selected-calendar-day {
+    font-size: 14px;
+}
+
+.hours-container {
+    /*width: fit-content;*/
+    position: relative;
+    text-align: left;
+    /*background: linear-gradient(90deg, red, transparent);*/
+    /*display: grid;*/
+    /*grid-template-columns: 0.3fr repeat(4, 0.5fr);*/
+    /*grid-template-rows: repeat(144, 1fr);*/
+    /*grid-gap: 0 1px;*/
+}
+
+.hour-label {
+    height: 25px;
+    font-size: 16px;
+}
+
+.hour-label:before {
+    content: '';
+    position: absolute;
+    /*top: 50%;*/
+    right: 0;
+    height: 1px; /* Высота линии */
+    width: 100%; /* Длина линии */
+    background-color: var(--day-view-hourline-color);
+    opacity: 0.25;
+}
+
+.current-time-line {
+    position: absolute;
+    height: 1px;
+    width: 95%;
+    left: 5%;
+    background-color: red;
+}
+
+.events-container {
+    user-select: none;
+    position: absolute;
+    height:  100%;
+    width: 94%;
+    left: 6%;
+    top: 0;
+    white-space: nowrap; /* Предотвращает перенос слов */
+    overflow-x: auto; /* Добавляет горизонтальную прокрутку при необходимости */
+    overflow-y: hidden;
+    /*display: table-column-group;*/
+}

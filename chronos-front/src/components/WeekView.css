@@ -1,0 +1,19 @@
+.week-events-container {
+    user-select: none;
+    position: absolute;
+    height:  100%;
+    width: 95.5%;
+    left: 4.5%;
+    top: 0;
+    white-space: nowrap; /* Предотвращает перенос слов */
+    overflow: hidden;
+    /*display: table-column-group;*/
+}
+
+.week-date-names{
+    padding-top: 5px;
+    display: grid;
+    grid-template-columns: 5% repeat(7, 1fr);
+    grid-gap: 1px;
+    text-align: center;
+}

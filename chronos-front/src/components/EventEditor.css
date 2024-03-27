@@ -1,0 +1,38 @@
+.event-editor {
+    display: grid;
+    position: absolute;
+    z-index: 999;
+    overflow: visible;
+    border-radius: 0 1em 1em 1em;
+    /*background-color: rgba(0, 0, 0, 0.4);*/
+    padding: 5px;
+    backdrop-filter: blur(3em);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.event-editor > * {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.event-editor > input[type='text'] {
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--text-color);
+    color: var(--text-color);
+}
+
+.event-editor > select {
+    background: none;
+    border: none;
+    color: var(--text-color);
+}
+
+/*.event-editor:before {*/
+/*    position: absolute;*/
+/*    content: "";*/
+/*    height: 20px;*/
+/*    width: 5px;*/
+/*    z-index: 999;*/
+/*    background-color: purple;*/
+/*}*/

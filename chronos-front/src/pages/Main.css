@@ -1,0 +1,21 @@
+a {
+    color: var(--text-color);
+    text-decoration: inherit;
+    cursor: pointer;
+}
+
+button {
+    white-space: nowrap;
+    font-size: 20px;
+    width: 100%;
+    height: 1.5em;
+    color: var(--text-color);
+    background-color: var(--calendar-cells-background);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.inputs {
+    margin: 5px;
+}

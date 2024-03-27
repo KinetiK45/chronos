@@ -1,0 +1,46 @@
+.calendar-cell {
+    height: 50px;
+    display: flex;
+    width: auto;
+    color: var(--text-color);
+    background: linear-gradient(to right, var(--calendar-cells-background) -90%, transparent);
+    border-left: 2px solid var(--calendar-cells-background);
+    border-radius: 5px;
+    /*background-color: var(--calendar-cells-background);*/
+    padding: 5px;
+    font-weight: bold;
+    position: relative;
+    transition-duration: 1s;
+}
+
+.calendar-cell:hover {
+    background: linear-gradient(to right, var(--calendar-cells-background), transparent);
+}
+
+.current-day{
+    background: linear-gradient(to right, var(--calendar-cells-background), transparent);
+}
+
+.date-of-month {
+}
+
+.events-size, .holidays-size {
+    right: 5px;
+    position: absolute;
+    color: black;
+    font-size: 10px;
+    width: 13px;
+    height: 13px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.events-size {
+    top: 5px;
+    background-color: rgba(0, 255, 0, 0.7);
+}
+
+.holidays-size {
+    top: 23px;
+    background-color: rgba(0, 0, 255, 0.7);
+}

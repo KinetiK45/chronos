@@ -1,0 +1,44 @@
+.week-event {
+    position: absolute;
+    padding: 2px;
+    border-radius: 0 5px 5px 0;
+    /*text-overflow: ellipsis;*/
+    overflow: hidden;
+    /*overflow: -webkit-paged-y; !*safari & chrome only*!*/
+    cursor: default;
+    /*transition-duration: 1s;*/
+    user-select: none;
+    backdrop-filter: blur(3px);
+}
+
+.week-event:hover {
+    /*min-height: max-content;*/
+    /*height: max-content;*/
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(9px);
+}
+
+
+.week-event * {
+    /*white-space: nowrap;*/
+    /*overflow: hidden;*/
+    overflow-block: hidden;
+    text-overflow: ellipsis;
+}
+
+.week-event-timeline {
+    z-index: 1;
+    position: absolute;
+    border-radius: 1px;
+    width: 3px;
+    min-height: 3px;
+    user-select: none;
+}
+
+.week-event-title {
+    text-overflow: ellipsis;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    font-size: 14px;
+}

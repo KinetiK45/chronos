@@ -1,0 +1,30 @@
+.center-block .errors {
+    display: none;
+    color: red;
+}
+
+.center-block > h1 {
+    margin-top: 10px;
+}
+
+.center-block > * {
+    margin-bottom: 10px;
+}
+
+.text-line {
+    font-size: 16px;
+    margin: 0;
+    display: inline-flex;
+}
+.text-line > p {
+    margin: 10px;
+}
+
+label {
+    align-self: center;
+    text-align: start;
+}
+
+.form-submit {
+    width: 100%;
+}

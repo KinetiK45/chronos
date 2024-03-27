@@ -1,0 +1,36 @@
+.event {
+    position: absolute;
+    padding-left: 5px;
+    border-radius: 0 5px 5px 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    /*overflow: -webkit-paged-y; !*safari & chrome only*!*/
+    cursor: default;
+    /*transition-duration: 1s;*/
+    user-select: none;
+}
+
+.event:hover {
+    /*min-height: max-content;*/
+    /*height: max-content;*/
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2em);
+}
+
+
+.event * {
+    /*white-space: nowrap;*/
+    overflow: hidden;
+    /*overflow-block: hidden;*/
+    /*text-overflow: ellipsis;*/
+}
+
+.day-event-timeline {
+    z-index: 1;
+    position: absolute;
+    /*background-color: #b0b0b0;*/
+    border-radius: 1px;
+    width: 5px;
+    min-height: 3px;
+    user-select: none;
+}

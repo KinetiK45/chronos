@@ -1,0 +1,119 @@
+body {
+  background-color: var(--background-color-main);
+  overflow-x: hidden;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  /*font-family: Georgia, serif;*/
+  color: var(--text-color);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--background-color-objects);
+  margin: 8px 0 0 0;
+}
+
+svg, .svg-image {
+  max-width: 20px;
+  max-height: 20px;
+  fill: var(--text-color);
+}
+
+input[type='text'], input[type='password'], input[type='email'], input[type='datetime-local'] {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: center;
+  padding: 5px;
+  border-bottom: 1px solid var(--text-color);
+  font-size: 1em;
+  max-height: 1.5em;
+  color: var(--text-color);
+}
+
+textarea {
+  border: none;
+  background: transparent;
+  color: var(--text-color);
+  transition-duration: unset;
+  resize: vertical;
+}
+
+textarea::placeholder,
+input[type='text']::placeholder,
+input[type='password']::placeholder,
+input[type='email']::placeholder,
+input[type='datetime-local']::placeholder{
+  color: var(--text-color);
+  opacity: 0.7;
+}
+
+input[type='datetime-local']::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+
+input[type='text']:focus,
+input[type='password']:focus,
+input[type='email']:focus,
+input[type='datetime-local']:focus{
+  border: none;
+  outline: none;
+  border-bottom: 2px solid var(--text-color);
+}
+
+select {
+  font-weight: bold;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  outline: none;
+}
+
+select > option {
+  background-color: var(--background-color-objects);
+}
+
+.main {
+  display: flex;
+}
+
+.main-content {
+  margin-top: 40px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+.center-block {
+  min-width: 800px;
+  display: block;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--background-color-objects);
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+:root {
+  /*--primary-color: #3498db;*/
+  /*--secondary-color: #2ecc71;*/
+  --text-color: #F2ECFF;
+  --background-color-main: #2F3135;
+  --background-color-objects: #4A545C;
+  --calendar-cells-background: #657B81;
+  /*--accent-color: #e74c3c; !* Акцентный цвет *!*/
+  --border-color: #ddd; /* Цвет границ */
+  --day-view-hourline-color: #83A4A4;
+}

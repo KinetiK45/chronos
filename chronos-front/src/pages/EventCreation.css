@@ -1,0 +1,18 @@
+#event-creation {
+    padding: 10px;
+    width: 500px;
+}
+
+#event-creation > * {
+    margin-bottom: 10px;
+}
+
+#event-creation > button {
+    margin-bottom: 0;
+}
+
+#event-creation > #description {
+    height: 2em;
+    width: 100%;
+    border-bottom: 1px solid var(--text-color);
+}

@@ -1,0 +1,88 @@
+.calendar-info-editor {
+    /*display: grid;*/
+    /*grid-gap: 20px;*/
+    /*grid-template-columns: max-content auto;*/
+}
+
+.calendar-header-buttons-line {
+    height: 5px;
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+}
+
+.calendar-user-inspect {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.calendar-user-inspect:hover {
+    background: linear-gradient(to right, var(--calendar-cells-background), transparent);
+}
+
+.calendar-user-inspect-userdata {
+    align-items: center;
+    display: flex;
+    width: max-content;
+}
+
+.calendar-user-inspect-userdata > * {
+    margin-right: 10px;
+}
+
+.calendar-user-inspect-avatar {
+    min-height: 50px;
+    height: 50px;
+    max-height: 50px;
+    min-width: 50px;
+    width: 50px;
+    max-width: 50px;
+    border-radius: 50%;
+}
+
+.users-found {
+    padding-left: 36px;
+}
+
+.color-picker {
+    height: 50px;
+    margin-left: 2px;
+    border: none;
+}
+
+.color-picker-input {
+    -webkit-appearance: none;
+    border: none;
+    padding: 0;
+    background: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50% 50% 50% 0;
+}
+
+/* -webkit */
+.color-picker-input::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+.color-picker-input::-webkit-color-swatch {
+    border: none;
+    border-radius: 50% 50% 50% 0;
+}
+
+/* firefox */
+.color-picker-input::-moz-focus-inner {
+    border: none;
+    padding: 0;
+    border-radius: 50% 50% 50% 0;
+}
+
+.color-picker-input::-moz-color-swatch {
+    border: none;
+    border-radius: 50% 50% 50% 0;
+}
+
+

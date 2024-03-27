@@ -1,0 +1,12 @@
+.calendar-view {
+    padding: 5px;
+}
+
+.view-selector {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.view-selector select {
+    font-size: 25px;
+}

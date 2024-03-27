@@ -1,0 +1,6 @@
+.calendar-view-nav-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+    align-items: center;
+}
