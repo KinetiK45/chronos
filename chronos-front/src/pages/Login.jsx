@@ -2,6 +2,7 @@ import './Main.css';
 import './Login.css';
 import Requests from "../API/requests";
 import Navigation from "../components/Navigation";
+import {useEffect} from "react";
 
 async function handle_auth() {
     const username = document.getElementById('username').value.trim();
@@ -29,13 +30,6 @@ const displayError = (errorMessage) => {
 };
 
 function Login() {
-
-    // useEffect(()=>{
-    //     if (localStorage.getItem('user_id')){
-    //         window.location.href = `/profile/${localStorage.getItem('user_id')}`;
-    //     }
-    // }, [])
-
     return (
         <div className="main">
             <Navigation/>

@@ -13,7 +13,15 @@ function Navigation() {
         const fetchData = async () => {
             const resp = await Requests.user_by_id(localStorage.getItem('user_id'));
             if (resp.state === true){
+                const currentURL = window.location.href.trim();
+                if (currentURL.includes('/login') || currentURL.includes('/registration')) {
+                    window.location.href = `${window.location.origin}/users/${localStorage.getItem('user_id')}`;
+                }
                 setUserdata(resp.data[0]);
+            }
+            else {
+                logout();
+                window.location.href = '/login';
             }
         }
         if (localStorage.getItem('user_id'))

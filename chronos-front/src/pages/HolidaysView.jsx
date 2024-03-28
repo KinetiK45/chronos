@@ -16,8 +16,8 @@ function HolidaysView() {
         // Проверяем, был ли уже выполнен запрос для текущего года
         if (!holidays.some(holiday => holiday.date.getFullYear() === currentYear)) {
             const fetchData = async () => {
-                const resp = await Requests.getNationalHolidays(currentYear, 'UA');
-                console.log(JSON.stringify(resp));
+                const myIpResp = await Requests.getMyLocation();
+                const resp = await Requests.getNationalHolidays(currentYear, myIpResp.countryCode);
 
                 // Преобразуем и добавляем праздники в состояние
                 const newHolidays = resp.map(element => {

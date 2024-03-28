@@ -43,7 +43,14 @@ async function userAvatar(req, res) {
             else{
                 let filename = users[0].photo
                 const filePath = path.join(__dirname, '../images', filename);
-                res.sendFile(filePath);
+                if (fs.existsSync(filePath)) {
+                    // Если файл существует, отправляем его
+                    res.sendFile(filePath);
+                } else {
+                    // Если файла нет, отправляем файл 'default.png'
+                    const defaultFilePath = path.join(__dirname, '../images/default.png');
+                    res.sendFile(defaultFilePath);
+                }
             }
         }).catch((error)=>{
         res.json(new Response(false, error.toString()))

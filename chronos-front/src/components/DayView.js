@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 import EventEditor from "./EventEditor";
 import DayViewEvent from "./DayViewEvent";
 import Requests from "../API/requests";
-import {fillEventsFullData, toLocalDateInputField} from "../utils/Utils";
+import {fillEventsFullData, filterEventsToTargetDate, toLocalDateInputField} from "../utils/Utils";
 import ViewTitle from "./ViewTitle";
 
 function DayView({ calendarData = {id: 1},
@@ -22,13 +22,15 @@ function DayView({ calendarData = {id: 1},
             const events_resp = await Requests.allEvents(
                 localStorage.getItem('token'),
                 calendarData.id,
-                startDay,
-                new Date(startDay.getTime() + 24 * 60 * 60 * 1000)
+                new Date(startDay.getTime() - 48 * 60 * 60 * 1000),
+                new Date(startDay.getTime() + 48 * 60 * 60 * 1000)
             );
 
             if (events_resp?.data?.events) {
                 refreshEvents(
-                    fillEventsFullData(events_resp.data.events, calendarData)
+                    filterEventsToTargetDate(currentViewDateAnchor,
+                        fillEventsFullData(events_resp.data.events, calendarData)
+                    )
                 );
             }
         };
