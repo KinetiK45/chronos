@@ -14,12 +14,14 @@ const displayError = (errorMessage) => {
 
 function AcceptInvitation() {
     const {acceptToken} = useParams();
-    const [acceptState, setAcceptState] = useState('Pending...');
+    const [acceptState, setAcceptState] = useState('Зачекайте...');
 
     useEffect(()=>{
         const fetchData = async () => {
             const resp = await Requests.acceptInvitation(acceptToken);
-            setAcceptState(JSON.stringify(resp.data))
+            if (resp.state === true){
+                setAcceptState('Інвайт прийнято, ви можете закрити цю сторінку');
+            }
         };
         fetchData();
     }, [acceptToken]);
@@ -31,9 +33,7 @@ function AcceptInvitation() {
                 <div className={'center-block'}>
                     <h1>Приймаю інвайт</h1>
                     <div className={'errors'}></div>
-                    {acceptState &&
-                        <div>{`${acceptState}`}</div>
-                    }
+                    <div>{`${acceptState}`}</div>
                 </div>
             </div>
         </div>

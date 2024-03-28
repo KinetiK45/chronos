@@ -1,9 +1,12 @@
 #event-creation {
     padding: 10px;
     width: 500px;
+    display: grid;
 }
 
 #event-creation > * {
+    display: inline-flex;
+    justify-content: center;
     margin-bottom: 10px;
 }
 
@@ -15,4 +18,9 @@
     height: 2em;
     width: 100%;
     border-bottom: 1px solid var(--text-color);
+}
+
+input[type='datetime-local'] {
+    display: flex;
+    justify-content: center;
 }

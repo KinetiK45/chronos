@@ -4,6 +4,7 @@ import {logout, toShortDateFormat} from "../utils/Utils";
 const url = new URL(window.location.origin);
 const ip = url.hostname;
 const domain = `http://${ip}:3001/api`;
+
 const axiosInstance = axios.create({
     baseURL: domain,
     headers: {
@@ -164,7 +165,7 @@ export default class Requests {
             },
         };
         const resp = await axiosInstance.post('/calendar/create', {
-            title: 'New calendar'
+            title: 'Новий календар'
         }, config);
         return resp.data;
     }

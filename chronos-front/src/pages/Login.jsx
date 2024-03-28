@@ -49,8 +49,8 @@ function Login() {
                     <h1>Вхід</h1>
                     <div className={'errors'}></div>
                     <div className={'inputs'}>
-                        <input id={'username'} name={'username'} type={'text'} placeholder={'username'}/>
-                        <input id={'password'} name={'password'} type={'password'} placeholder={'password'}/>
+                        <input id={'username'} name={'username'} type={'text'} placeholder={'Логін'}/>
+                        <input id={'password'} name={'password'} type={'password'} placeholder={'Пароль'}/>
                     </div>
                     <div className={'text-line'}>
                         <p>Немає аккаунту? <a href={'/registration'}>Зареєструватися</a></p>

@@ -69,11 +69,11 @@ function EventCreation() {
                     <input
                         id={'title'}
                         type={'text'}
-                        placeholder={'Title'}
+                        placeholder={'Заголовок'}
                     />
                     <textarea
                         id="description"
-                        placeholder="Description"
+                        placeholder="Опис"
                         maxLength={255}
                     />
                     <input
@@ -90,23 +90,31 @@ function EventCreation() {
                         defaultValue={toLocalDateInputField(endAt)}
                         onChange={() => setEndAt(new Date(document.getElementById('endAt').value))}
                     />
-                    <select
-                        id="categorySelector"
-                        defaultValue={category || 'arrangement'}
-                        onChange={(event) => setCategory(event.target.value)}
-                    >
-                        <option value="arrangement">Arrangement</option>
-                        <option value="reminder">Reminder</option>
-                        <option value="task">Task</option>
-                    </select>
+                    <div style={{
+                        display: 'inline-flex',
+                    }}>
+                        <div
+                            style={{
+                                marginRight: 5
+                            }}
+                        >Тип:</div>
+                        <select
+                            id="categorySelector"
+                            defaultValue={category || 'arrangement'}
+                            onChange={(event) => setCategory(event.target.value)}
+                        >
+                            <option value="arrangement">Захід</option>
+                            <option value="reminder">Нагадування</option>
+                            <option value="task">Завдання</option>
+                        </select>
+                    </div>
                     {category !== 'reminder' &&
-                        <div>
-                            <input
-                                type="checkbox"
-                                id="notification"
-                                name="notification"
-                            />
-                            <label htmlFor="notification">Notification</label>
+                        <div className={'toggle-text-container'}>
+                            <input type="checkbox" id="notification"/>
+                            <label htmlFor="notification" className="toggle-container">
+                                <div className="toggle-slider"></div>
+                            </label>
+                            <div>Сповіщення</div>
                         </div>
                     }
                     {category === 'arrangement' &&
@@ -114,21 +122,11 @@ function EventCreation() {
                             <input
                                 id={'place'}
                                 type={'text'}
-                                placeholder={'Place'}
+                                placeholder={'Місце'}
                             />
                         </div>
                     }
-                    {category === 'task' &&
-                        <div>
-                            <input
-                                type="checkbox"
-                                id="complete"
-                                name="complete"
-                            />
-                            <label htmlFor="notification">Complete</label>
-                        </div>
-                    }
-                    <button onClick={submitFrom}>Submit</button>
+                    <button onClick={submitFrom}>Створити івент</button>
                 </div>
             </div>
         </div>

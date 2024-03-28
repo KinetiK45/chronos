@@ -19,6 +19,9 @@ async function handle_reg() {
         return displayError('Пароли не совпадают');
     }
 
+    if (!/^[\w.%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(email))
+        return displayError('Уведіть корректну пошту');
+
     const resp = await Requests.registration(username, password, email, full_name);
     if (resp.state === true){
         window.location.href = '/login';
@@ -55,11 +58,11 @@ function Registration() {
                     <h1>Реєстрація</h1>
                     <div className={'errors'}></div>
                     <div className={'inputs'}>
-                        <input id={'username'} name={'username'} type={'text'} placeholder={'username'}/>
-                        <input id={'full_name'} name={'full_name'} type={'text'} placeholder={'full name'}/>
-                        <input id={'password'} name={'password'} type={'password'} placeholder={'password'}/>
-                        <input id={'password-confirm'} name={'password-confirm'} type={'password'} placeholder={'password confirmation'}/>
-                        <input id={'email'} name={'email'} type={'email'} placeholder={'email'} pattern={'^.*@.*\\..*$'}/>
+                        <input id={'username'} name={'username'} type={'text'} placeholder={'Логін'}/>
+                        <input id={'password'} name={'password'} type={'password'} placeholder={'Пароль'}/>
+                        <input id={'password-confirm'} name={'password-confirm'} type={'password'} placeholder={'Підтвердження паролю'}/>
+                        <input id={'email'} name={'email'} type={'email'} placeholder={'Пошта'}/>
+                        <input id={'full_name'} name={'full_name'} type={'text'} placeholder={'Імʼя'}/>
                     </div>
                     <div className={'text-line'}>
                         <p>Маєте аккаунт? <a href={`${window.location.origin}/login`}>Вхід</a></p>

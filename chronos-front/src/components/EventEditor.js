@@ -101,14 +101,14 @@ function EventEditor({
         </select>
 
         {category !== 'reminder' &&
-            <div>
-                <input
-                    type="checkbox"
-                    id="notification"
-                    name="notification"
-                    defaultChecked={eventData.notification}
+            <div className={'toggle-text-container'}>
+                <input type="checkbox" id="notification"
+                       defaultChecked={eventData.notification}
                 />
-                <label htmlFor="notification">Сповіщення</label>
+                <label htmlFor="notification" className="toggle-container">
+                    <div className="toggle-slider"></div>
+                </label>
+                <div>Сповіщення</div>
             </div>
         }
         {category === 'arrangement' &&
@@ -122,14 +122,14 @@ function EventEditor({
             </div>
         }
         {category === 'task' &&
-            <div>
-                <input
-                    type="checkbox"
-                    id="complete"
-                    name="complete"
-                    defaultChecked={eventData?.complete}
+            <div className={'toggle-text-container'}>
+                <input type="checkbox" id="complete"
+                       defaultChecked={eventData?.complete}
                 />
-                <label htmlFor="complete">Статус виконання</label>
+                <label htmlFor="complete" className="toggle-container">
+                    <div className="toggle-slider"></div>
+                </label>
+                <div>Статус виконання</div>
             </div>
         }
         <div

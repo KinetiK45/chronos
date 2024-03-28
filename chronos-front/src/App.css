@@ -1,5 +1,6 @@
 body {
-  background-color: var(--background-color-main);
+  background: url("https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
   overflow-x: hidden;
   font-size: 24px;
   display: flex;
@@ -81,6 +82,62 @@ select > option {
   background-color: var(--background-color-objects);
 }
 
+/* Скрываем оригинальный чекбокс */
+input[type="checkbox"] {
+  display: none;
+}
+
+.toggle-text-container{
+  display: inline-flex;
+}
+
+/* Контейнер для кнопки-переключателя */
+.toggle-container {
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+  position: relative;
+  margin-right: 5px;
+}
+
+/* Стилизация кнопки-переключателя */
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--checkbox-off-color);
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+/* Индикатор состояния */
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 3px;
+  bottom: 5px;
+  background-color: var(--text-color);
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+/* Стилизация для отмеченного состояния */
+input[type="checkbox"]:checked + .toggle-container .toggle-slider {
+  background-color: var(--checkbox-on-color);
+}
+
+/* Стилизация для отмеченного состояния */
+input[type="checkbox"]:checked + .toggle-container .toggle-slider:before {
+  transform: translateX(22px);
+}
+
 .main {
   display: flex;
 }
@@ -110,10 +167,12 @@ select > option {
   /*--primary-color: #3498db;*/
   /*--secondary-color: #2ecc71;*/
   --text-color: #F2ECFF;
-  --background-color-main: #2F3135;
-  --background-color-objects: #4A545C;
+  --background-color-main: #OB0C10;
+  --background-color-objects: #1F2833;
   --calendar-cells-background: #657B81;
+  --checkbox-on-color: #66FCF1;
+  --checkbox-off-color: #45A29E;
   /*--accent-color: #e74c3c; !* Акцентный цвет *!*/
-  --border-color: #ddd; /* Цвет границ */
-  --day-view-hourline-color: #83A4A4;
+  --border-color: #C5C6C7; /* Цвет границ */
+  --day-view-hourline-color: #45A29E;
 }
